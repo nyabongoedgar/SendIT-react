@@ -1,0 +1,44 @@
+.authForms{
+    margin-top: 10%;
+    background-color: #fefefe;
+    width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.authForms input[type=text], input[type=password], input[type=number] {
+    width: 100%!important;
+    margin-bottom: 10px!important;
+    height: 25px!important;
+    padding: 5px!important;
+    text-align: center!important;
+    outline: none!important;
+    border: 1px solid #ddd!important;
+}
+
+.authForms button {
+    cursor: pointer!important;
+    margin-top: 10px!important;
+    width: 103%!important;
+    margin-bottom: 10px!important;
+    color: #fff!important;
+    border: 0px solid!important;
+    height: 40px!important;
+    background-color: #14B9D6!important;
+    padding: 5px!important;
+    text-align: center!important;
+}
+
+.authForms h1, h2, h3, h4 {
+    color: #000!important;
+    font-family: "Open Sans", sans-serif!important;
+    line-height: 1.5!important;
+    font-size: 2em!important;
+}
+
+body{
+background-image: url(../images/Truck.jpg);
+}

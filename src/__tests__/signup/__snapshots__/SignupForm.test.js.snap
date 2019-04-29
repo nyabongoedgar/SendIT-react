@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignupForm Component it matches the snapshot 1`] = `
+<div
+  className="authForms"
+>
+  <form
+    id="#signUpForm"
+  >
+    <h1>
+      SIGN UP
+    </h1>
+    <input
+      id="username"
+      name="username"
+      placeholder="Username"
+      required={true}
+      type="text"
+    />
+    <br />
+    <input
+      id="email"
+      name="email"
+      placeholder="Email Address"
+      required={true}
+      type="text"
+    />
+    <br />
+    <input
+      id="password"
+      name="password"
+      placeholder="Password"
+      required={true}
+      type="password"
+    />
+    <br />
+    <input
+      id="password2"
+      name="password2"
+      placeholder="Confirm Password"
+      required={true}
+      type="password"
+    />
+    <br />
+    <div
+      className="loadedContent"
+    >
+      <button
+        className="btn regBtn"
+        type="submit"
+      >
+        Create account
+      </button>
+    </div>
+    <br />
+    I have an account! 
+    <a
+      href="/login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+    <br />
+  </form>
+</div>
+`;
