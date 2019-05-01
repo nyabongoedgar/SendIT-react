@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SignupForm Component it matches the snapshot 1`] = `
-<div
-  className="authForms"
->
+<div>
   <form
     className="authForms"
+    id="parcelForm"
   >
     <h1>
       CREATE PARCEL DELIVERY ORDER

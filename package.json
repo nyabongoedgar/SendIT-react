@@ -2,18 +2,23 @@
   "name": "SendIT-react",
   "jest": {
     "setupFilesAfterEnv": [
-      "/Users/edgar/Desktop/CH4/SendIT-react/src/setupTests.js"
+      "<rootDir>/src/setupTests.js"
     ],
     "collectCoverage": true,
     "verbose": true
   },
   "version": "1.0.0",
+  "engines": {
+    "npm":"6.4.1",
+    "node": "10.15.1"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --hot --mode development --history-api-fallback",
     "build": "webpack --mode production",
     "test": "jest",
+    "coverage": "react-scripts test --env=jsdom --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test:coverage": "jest --collectCoverage"
   },

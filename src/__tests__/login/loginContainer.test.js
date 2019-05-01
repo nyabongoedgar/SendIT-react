@@ -3,10 +3,10 @@ import { mount, shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import moxios from 'moxios';
 import thunk from 'redux-thunk';
-import { userLoginRequest } from '../../../src/actions/login/loginActions';
-import LoginComponent, {LoginContainer} from '../../../src/containers/login/LoginContainer';
+import { userLoginRequest } from '../../actions/login/loginActions'
+import LoginComponent, {LoginContainer} from '../../containers/login/LoginContainer';
 import {Provider} from 'react-redux';
-import store from '../../../src/Store';
+import store from '../../Store';
 
 describe('MapStateToDispatch', () => {
 

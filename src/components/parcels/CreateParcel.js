@@ -3,9 +3,9 @@ import React from 'react'
 const CreateParcel = (props) => {
     let Loader = require('react-loader')
     return (
-        <div className="authForms">
+        <div>
        
-        <form onSubmit={props.submitHandler} className="authForms">
+        <form onSubmit={props.submitHandler} className="authForms" id="parcelForm">
 
         <h1>CREATE PARCEL DELIVERY ORDER</h1>
 

@@ -9,7 +9,7 @@ export class ParcelContainer extends Component {
     super(props);
     this.state = {
         parcel_description: '',
-        parcel_weight: '',
+        parcel_weight: 0,
         parcel_source: '',
         parcel_destination: '',
         receiver_name: '',
@@ -34,11 +34,10 @@ export class ParcelContainer extends Component {
         parcel_destination: this.state.parcel_destination,
         receiver_name: this.state.receiver_name,
         receiver_telephone: this.state.receiver_telephone,
+        "current_location": this.state.parcel_source,
+	      "status":"pending"
       };
       this.props.parcelHandler(data);
-      // this.props.parcelHandler(data);
-
-      // this.props.parcelHandler(data)
     } 
   };
 

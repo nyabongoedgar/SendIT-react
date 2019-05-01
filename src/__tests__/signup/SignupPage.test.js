@@ -3,10 +3,10 @@ import { mount, shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import moxios from 'moxios';
 import thunk from 'redux-thunk';
-import { userSignupRequest } from '../../../src/actions/signup/signupActions';
-import SignupPageComponent, {SignupPage} from '../../../src/containers/signup/SignupContainer';
+import { userSignupRequest } from '../../actions/signup/signUpActions'
+import SignupPageComponent, {SignupPage} from '../../containers/signup/SignupContainer'
 import {Provider} from 'react-redux';
-import store from '../../../src/Store';
+import store from '../../Store';
 
 describe('MapStateToDispatch', () => {
 
