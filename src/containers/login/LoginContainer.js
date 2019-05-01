@@ -39,8 +39,8 @@ export class LoginContainer extends Component {
 
     return (
       <div className="container">
+      
         <Login
-          
           submitHandler = {this.submitHandler}
           inputHandler={this.inputHandler}
           password={this.state.password}

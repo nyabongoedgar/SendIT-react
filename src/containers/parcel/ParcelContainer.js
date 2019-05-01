@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { parcelHandler } from '../../actions/parcel/parcelActions'
-import M from 'materialize-css/dist/js/materialize.js';
 import CreateParcel from '../../components/parcels/CreateParcel';
-
+import PropTypes from 'prop-types';
 
 export class ParcelContainer extends Component {
   constructor(props) {
@@ -17,7 +15,6 @@ export class ParcelContainer extends Component {
         receiver_name: '',
         receiver_telephone: ''
     };
-    console.log(props)
   }
 
 
@@ -38,16 +35,15 @@ export class ParcelContainer extends Component {
         receiver_name: this.state.receiver_name,
         receiver_telephone: this.state.receiver_telephone,
       };
-      // this.props.parcelHandler(data);
-      console.log(this.props);
-      // this.props.parcelHandler(data)
+      this.props.parcelHandler(data);
     } 
   };
 
 
   render() {
-    console.log(this.state)
+
     return (
+ 
       <div>
 
         <CreateParcel
@@ -62,23 +58,18 @@ export class ParcelContainer extends Component {
           isLoading={this.props.loading}
         />
       </div>
+  
     );
   }
 }
 
-// ParcelContainer.propTypes = {
-//   parcelHandler: PropTypes.func.isRequired,
-// };
-
-const mapDispatchToProps = dispatch => bindActionCreators({
-  getParcelHandler: parcelHandler,
-}, dispatch)
-
+ParcelContainer.propTypes = {
+  parcelHandler: PropTypes.func.isRequired,
+};
 
 export const mapStateToProps = state => ({
   loading: state.parcelReducer.loading 
 })
 
+export default connect(mapStateToProps, { parcelHandler })(ParcelContainer);
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(ParcelContainer);

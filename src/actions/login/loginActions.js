@@ -23,7 +23,6 @@ export const userLoginRequest = userData => async (dispatch) => {
       userData,
     );
     dispatch(successLogin(response.data));
-    console.log(response.data);
     localStorage.setItem("token", response.data.token);
     M.toast({ html: 'Login successful !', classes: 'green' });
 

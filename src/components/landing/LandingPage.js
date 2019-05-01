@@ -4,7 +4,7 @@ import SignupPage from "../../containers/signup/SignupContainer";
 import LoginContainer from "../../containers/login/LoginContainer";
 import M from "materialize-css/dist/js/materialize.js";
 import NavBar from "../NavBar";
-import { ParcelContainer } from "../../containers/parcel/ParcelContainer";
+import ParcelContainer from "../../containers/parcel/ParcelContainer";
 
 class LandingPage extends Component {
   render() {

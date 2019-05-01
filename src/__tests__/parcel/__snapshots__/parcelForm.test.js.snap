@@ -57,6 +57,7 @@ exports[`SignupForm Component it matches the snapshot 1`] = `
       className="loadedContent"
     >
       <button
+        className="btn"
         type="submit"
       >
         CREATE ORDER
