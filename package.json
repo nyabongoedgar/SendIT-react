@@ -9,7 +9,7 @@
   },
   "version": "1.0.0",
   "engines": {
-    "npm":"6.4.1",
+    "npm": "6.4.1",
     "node": "10.15.1"
   },
   "description": "",
@@ -22,7 +22,7 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test:coverage": "jest --collectCoverage",
     "heroku-postbuild": "npm run build ",
-    "heroku-prebuild": "npm install "
+    "heroku-prebuild": "npm install"
   },
   "heroku-run-build-script": true,
   "repository": {
@@ -79,3 +79,4 @@
     "redux-thunk": "^2.3.0"
   }
 }
+

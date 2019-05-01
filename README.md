@@ -4,10 +4,10 @@
 [![Coverage Status](https://coveralls.io/repos/github/nyabongoedgar/SendIT-react/badge.svg?branch=develop)](https://coveralls.io/github/nyabongoedgar/SendIT-react?branch=develop)
 
 
-App hosted at: https://send-it-react2.herokuapp.com/
+<p>App hosted at: https://send-it-react2.herokuapp.com/</p>
 
 <h1>Instructions</h1>
-T<p>To signup, visit, https://send-it-react2.herokuapp.com/signup and provide a "username", "password" and "email", all must be a string </p>
+<p>To signup, visit, https://send-it-react2.herokuapp.com/signup and provide a "username", "password" and "email", all must be a string </p>
 
 <p>To signin, visit, https://send-it-react2.herokuapp.com/login and provide the "username" and the "password" you used to create the account. </p>
 
