@@ -20,8 +20,11 @@
     "test": "jest",
     "coverage": "react-scripts test --env=jsdom --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "test:coverage": "jest --collectCoverage"
+    "test:coverage": "jest --collectCoverage",
+    "heroku-postbuild": "npm run build ",
+    "heroku-prebuild": "npm install "
   },
+  "heroku-run-build-script": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nyabongoedgar/SendIT-react.git"
