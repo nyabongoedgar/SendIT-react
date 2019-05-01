@@ -26,13 +26,12 @@ export class LoginContainer extends Component {
 
   submitHandler = e => {
     e.preventDefault();
-    this.setState({isLoading:true})
       const data = {
-        user: {
-          username: this.state.username,
-          password: this.state.password,
-        },
-      };
+        username: this.state.username,
+        password: this.state.password,
+      }
+          
+      
       this.props.userLoginRequest(data);
     } ;
 
@@ -40,14 +39,14 @@ export class LoginContainer extends Component {
 
     return (
       <div className="container">
+      
         <Login
-          
           submitHandler = {this.submitHandler}
           inputHandler={this.inputHandler}
           password={this.state.password}
           username={this.state.username}
           userLoginRequest= {this.props.userLoginRequest}  
-          error ={this.props.data.error} 
+          isLoading={this.props.loading}
         />
       </div>
     );
@@ -59,7 +58,7 @@ LoginContainer.propTypes = {
 };
 
 export const mapStateToProps = (state) => {
-  return { data: state.LoginReducer }
+  return { loading: state.LoginReducer.loading }
 }
 
 

@@ -1,9 +1,12 @@
 import React from "react";
+import { BrowserRouter, Link} from 'react-router-dom';
 
-const Login = props => {
+const Login = (props) => {
+  let Loader = require('react-loader')
   return (
-    <div className="container">
+    <div className="authForms">
       <form id="login_form" onSubmit={props.submitHandler}>
+      <h1>SIGN IN</h1>
         <input
           value={props.username}
           onChange={props.inputHandler}
@@ -23,18 +26,21 @@ const Login = props => {
           id="login-password"
           required
         />
-
+        <Loader loaded={!props.isLoading}>
         <button type="submit" className="btn">
           SUBMIT
         </button>
+        </Loader>
 
         <span>
           <p id="error" />
         </span>
 
         <p>
-          Dont have an account ?.
-          <a href="register.html">Create account</a>
+          <BrowserRouter>
+          Dont have an account ?. 
+          <Link to="/signup">Create account</Link> 
+          </BrowserRouter>
         </p>
       </form>
     </div>

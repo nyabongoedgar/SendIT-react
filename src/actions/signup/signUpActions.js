@@ -24,9 +24,9 @@ export const userSignupRequest = userData => async (dispatch) => {
     );
     dispatch(successRegistration(response.data));
     M.toast({ html: 'You are signed up, Please login', classes: 'green' });
-    /* istanbul ignore next */
-    setTimeout(() => window.location.reload(), 3000);
+    // setTimeout(() => window.location.reload(), 3000);
   } catch (error) {
     dispatch(failedRegistration(error.response.data));
+    M.toast( {html: error.response.data.message, classes: 'red'} );
   }
 };

@@ -1,13 +1,16 @@
 import React from "react";
+import { BrowserRouter, Link } from 'react-router-dom';
 
 const SignUp = props => {
+  let Loader = require('react-loader')
   return (
-    <div>
-      <form onSubmit={props.submitHandler}>
+    <div className="authForms">
+      <form onSubmit={props.submitHandler} id="#signUpForm">
+      <h1>SIGN UP</h1>
         <input
           value={props.username}
           onChange={props.inputHandler}
-          required=""
+          required
           name="username"
           id="username"
           placeholder="Username"
@@ -17,7 +20,7 @@ const SignUp = props => {
         <input
           value={props.email}
           onChange={props.inputHandler}
-          required=""
+          required
           name="email"
           id="email"
           placeholder="Email Address"
@@ -27,7 +30,7 @@ const SignUp = props => {
         <input
           value={props.password}
           onChange={props.inputHandler}
-          required=""
+          required
           name="password"
           id="password"
           placeholder="Password"
@@ -37,21 +40,22 @@ const SignUp = props => {
         <input
           value={props.password2}
           onChange={props.inputHandler}
-          required=""
+          required
           name="password2"
           id="password2"
           placeholder="Confirm Password"
           type="password"
         />
         <br />
-        <button type="submit" className="btn">
+        <Loader loaded={!props.isLoading}>
+        <button type="submit" className="btn regBtn">
           Create account
         </button>
+        </Loader>
         <br />
-        <p id="error">{props.error}</p> <br />
-        <p>
-          I have an account! <a href="home.html">Login</a>
-        </p>
+      
+          I have an account! <BrowserRouter><Link to="/login">Login</Link></BrowserRouter>
+        
         <br />
       </form>
     </div>

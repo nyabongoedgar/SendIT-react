@@ -1,22 +1,28 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import SignupPage from "../../containers/signup/SignupContainer";
 import LoginContainer from "../../containers/login/LoginContainer";
 import M from "materialize-css/dist/js/materialize.js";
 import NavBar from "../NavBar";
+import ParcelContainer from "../../containers/parcel/ParcelContainer";
 
 class LandingPage extends Component {
   render() {
     var elems = document.querySelectorAll(".modal");
     M.Modal.init(elems);
     return (
-      <BrowserRouter>
-        <div>
+ 
+        <BrowserRouter>
           <NavBar />
-          <Route path="/login" component={LoginContainer} />
-          <Route path="/signup" component={SignupPage} />
-        </div>
-      </BrowserRouter>
+          <Switch>
+          <Route exact path="/login"  component={LoginContainer} />
+          <Route exact path="/signup" component={SignupPage} />
+          <Route exact path="/parcels" component={ParcelContainer} />
+
+          </Switch>
+         
+        </BrowserRouter>
+    
     );
   }
 }

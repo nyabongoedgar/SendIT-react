@@ -23,9 +23,14 @@ export const userLoginRequest = userData => async (dispatch) => {
       userData,
     );
     dispatch(successLogin(response.data));
+    localStorage.setItem("token", response.data.token);
     M.toast({ html: 'Login successful !', classes: 'green' });
-    //re-route clients to dashboard.
+
+    document.location.href="/parcels";
+
+    
   } catch (error) {
     dispatch(failedLogin(error.response.data));
+    M.toast({ html: error.response.data.message, classes: 'red' });
   }
 };

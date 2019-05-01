@@ -29,18 +29,15 @@ export class SignupPage extends Component {
 
   submitHandler = e => {
     e.preventDefault();
-    this.setState({isLoading:true})
     if (this.state.password === this.state.password2) {
       const data = {
-        user: {
           username: this.state.username,
           email: this.state.email,
           password: this.state.password,
-        },
       };
       this.props.userSignupRequest(data);
     } else {
-      M.toast({html: 'Passwords do not match!', classes: 'green'});
+      M.toast({html: 'Passwords do not match!', classes: 'red'});
 
     }
   };
@@ -58,7 +55,7 @@ export class SignupPage extends Component {
           email={this.state.email}
           username={this.state.username}
           userSignupRequest= {this.props.userSignupRequest}  
-          error ={this.props.data.error} 
+          isLoading={this.props.loading}
         />
       </div>
     );
@@ -70,7 +67,7 @@ SignupPage.propTypes = {
 };
 
 export const mapStateToProps = (state) => {
-  return { data: state.registrationReducer }
+  return { loading: state.registrationReducer.loading }
 }
 
 

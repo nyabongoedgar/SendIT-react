@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignupForm Component it matches the snapshot 1`] = `
+<div>
+  <form
+    className="authForms"
+    id="parcelForm"
+  >
+    <h1>
+      CREATE PARCEL DELIVERY ORDER
+    </h1>
+    <input
+      name="parcel_description"
+      placeholder="parcel_description"
+      required={true}
+      type="text"
+    />
+    <input
+      name="parcel_weight"
+      placeholder="parcel_weight"
+      required={true}
+      type="number"
+    />
+     
+    <br />
+    <input
+      name="parcel_source"
+      placeholder="parcel_source"
+      required={true}
+      type="text"
+    />
+    <br />
+    <input
+      name="parcel_destination"
+      placeholder=" parcel_destination"
+      required={true}
+      type="text"
+    />
+     
+    <br />
+    <input
+      name="receiver_name"
+      placeholder="Enter receiver name"
+      required={true}
+      type="text"
+    />
+    <br />
+    <input
+      maxLength="10"
+      name="receiver_telephone"
+      placeholder="Enter receiver Telephone number starting with a 0"
+      required={true}
+      type="text"
+    />
+    <div
+      className="loadedContent"
+    >
+      <button
+        className="btn"
+        type="submit"
+      >
+        CREATE ORDER
+      </button>
+    </div>
+  </form>
+</div>
+`;
