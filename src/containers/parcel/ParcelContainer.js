@@ -36,6 +36,9 @@ export class ParcelContainer extends Component {
         receiver_telephone: this.state.receiver_telephone,
       };
       this.props.parcelHandler(data);
+      // this.props.parcelHandler(data);
+
+      // this.props.parcelHandler(data)
     } 
   };
 
