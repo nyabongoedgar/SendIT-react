@@ -15,6 +15,7 @@ class LandingPage extends Component {
         <BrowserRouter>
           <NavBar />
           <Switch>
+          <Route exact path="/" component={LoginContainer} />
           <Route exact path="/login"  component={LoginContainer} />
           <Route exact path="/signup" component={SignupPage} />
           <Route exact path="/parcels" component={ParcelContainer} />
