@@ -37,10 +37,9 @@ const Login = (props) => {
         </span>
 
         <p>
-          <BrowserRouter>
           Dont have an account ?. 
           <Link to="/signup">Create account</Link> 
-          </BrowserRouter>
+         
         </p>
       </form>
     </div>

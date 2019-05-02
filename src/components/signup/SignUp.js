@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Link } from 'react-router-dom';
+import LoginContainer from '../../containers/login/LoginContainer';
 
 const SignUp = props => {
   let Loader = require('react-loader')
@@ -53,8 +54,8 @@ const SignUp = props => {
         </button>
         </Loader>
         <br />
-      
-          I have an account! <BrowserRouter><Link to="/login">Login</Link></BrowserRouter>
+          I have an account! 
+          <Link to="/login">Login</Link>
         
         <br />
       </form>
