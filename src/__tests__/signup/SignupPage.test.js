@@ -7,6 +7,7 @@ import { userSignupRequest } from '../../actions/signup/signUpActions'
 import SignupPageComponent, {SignupPage} from '../../containers/signup/SignupContainer'
 import {Provider} from 'react-redux';
 import store from '../../Store';
+import {BrowserRouter} from 'react-router-dom';
 
 describe('MapStateToDispatch', () => {
 
@@ -15,7 +16,7 @@ describe('MapStateToDispatch', () => {
   const props = {
     userSignupRequest: jest.fn()
   }
-   mount(<Provider store={store}><SignupPageComponent {...props} /></Provider>);
+   mount(<Provider store={store}><BrowserRouter><SignupPageComponent {...props} /></BrowserRouter></Provider>);
 
   });
 
@@ -106,7 +107,7 @@ describe('Form', () => {
     isLoading: true
   };
   it('should change property name in the state', () => {
-    const componentWrapper = mount(<Provider store={store}><SignupPage {...newProps} /></Provider>);
+    const componentWrapper = mount(<Provider store={store}><BrowserRouter><SignupPage {...newProps} /></BrowserRouter></Provider>);
     componentWrapper.setProps({ email: 'blah@gmail.com' });
     expect(componentWrapper.props().email).toEqual('blah@gmail.com');
   });
