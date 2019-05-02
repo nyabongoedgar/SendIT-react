@@ -7,6 +7,7 @@ import { userLoginRequest } from '../../actions/login/loginActions'
 import LoginComponent, {LoginContainer} from '../../containers/login/LoginContainer';
 import {Provider} from 'react-redux';
 import store from '../../Store';
+import {BrowserRouter} from 'react-router-dom';
 
 describe('MapStateToDispatch', () => {
 
@@ -15,7 +16,7 @@ describe('MapStateToDispatch', () => {
   const props = {
     userSignupRequest: jest.fn()
   }
-   mount(<Provider store={store}><LoginComponent {...props} /></Provider>);
+   mount(<Provider store={store}><BrowserRouter><LoginComponent {...props} /></BrowserRouter></Provider>);
 
   });
 
@@ -100,7 +101,7 @@ describe('Form', () => {
     isLoading:false
 }
   it('should change property name in the state', () => {
-    const componentWrapper = mount(<Provider store={store}><LoginContainer {...newProps} /></Provider>);
+    const componentWrapper = mount(<Provider store={store}><BrowserRouter><LoginContainer {...newProps} /></BrowserRouter></Provider>);
     componentWrapper.setProps({ username: 'BillyBones' });
     expect(componentWrapper.props().username).toEqual('BillyBones');
   });

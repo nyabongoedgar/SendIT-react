@@ -53,7 +53,7 @@ exports[`SignupForm Component it matches the snapshot 1`] = `
       </button>
     </div>
     <br />
-    I have an account! 
+    I have an account!
     <a
       href="/login"
       onClick={[Function]}

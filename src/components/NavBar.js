@@ -15,6 +15,8 @@ const NavBar = () => {
   )
   const privateRoutes=(
     <ul id="nav-mobile" className="right hide-on-med-and-down">
+  
+  <li><Link to="/view-parcels">View Parcels</Link></li>
           <li onClick={()=>{
             localStorage.removeItem("token");
             
@@ -23,15 +25,18 @@ const NavBar = () => {
           }}>
             <Link  to="/logout">Logout</Link>
     </li>
+
     </ul>
   )
   return (
     <nav>
       <div className="nav-wrapper red darken-3">
+      <div className="container">
         <a href="#" className="brand-logo left">
           SEND IT
         </a>
         {localStorage.getItem("token")?privateRoutes:authRoutes}
+      </div>
       </div>
     </nav>
   );
