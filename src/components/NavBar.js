@@ -15,7 +15,8 @@ const NavBar = () => {
   )
   const privateRoutes=(
     <ul id="nav-mobile" className="right hide-on-med-and-down">
-  
+
+  <li><Link to="/parcels">New Order</Link></li>
   <li><Link to="/view-parcels">View Parcels</Link></li>
           <li onClick={()=>{
             localStorage.removeItem("token");

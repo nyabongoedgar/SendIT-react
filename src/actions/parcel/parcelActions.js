@@ -28,6 +28,7 @@ export const parcelHandler = parcelData => async (dispatch) => {
     );
     dispatch(successOrder(response.data));
     M.toast({ html: 'You order has been placed Please !', classes: 'green' });
+    document.location.href="/view-parcels";
   } catch (error) {
     dispatch(failedOrder(error.response.data));
     M.toast( {html: 'Order was not placed, please try again', classes: 'red'} );
