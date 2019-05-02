@@ -46,10 +46,11 @@ export default class retrieveParcel extends Component {
 
     };
 
+   componentDidMount(){
+      this.get_all_parcels()
+   }
 
   render() {
-
-    this.get_all_parcels()
     return (
  
       <div id="content">
